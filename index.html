@@ -1,0 +1,1137 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071F5B">
+  <meta name="description" content="Chachapoyas Se Mueve: propuestas para la juventud de la provincia de Chachapoyas.">
+  <meta name="robots" content="index,follow">
+
+  <title>Chachapoyas Se Mueve</title>
+  <link rel="canonical" href="https://vamaz2730.github.io/chachapoyas-se-mueve/">
+  <link rel="preload" as="image" href="assets/Imagen_1.webp" fetchpriority="high">
+
+  <!-- Vista previa para WhatsApp, Facebook y otras redes -->
+  <meta property="og:locale" content="es_PE">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Chachapoyas Se Mueve">
+  <meta property="og:description" content="Ideas y propuestas para que el talento joven crezca en Chachapoyas.">
+  <meta property="og:url" content="https://vamaz2730.github.io/chachapoyas-se-mueve/">
+  <meta property="og:image" content="https://vamaz2730.github.io/chachapoyas-se-mueve/assets/Imagen_1.webp">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="1000">
+  <meta property="og:image:alt" content="Chachapoyas Se Mueve con el Tío Raulito">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Chachapoyas Se Mueve">
+  <meta name="twitter:description" content="Ideas y propuestas para que el talento joven crezca en Chachapoyas.">
+  <meta name="twitter:image" content="https://vamaz2730.github.io/chachapoyas-se-mueve/assets/Imagen_1.webp">
+
+  <style>
+    :root {
+      --navy: #071F5B;
+      --blue: #0C3FA9;
+      --red: #E1162E;
+      --yellow: #FFD54A;
+      --cream: #FFF6DF;
+      --white: #fff;
+      --ink: #10234E;
+      --black: #030917;
+      --shadow: 0 18px 42px rgba(3, 9, 23, .25);
+      --radius: 26px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-snap-type: y proximity;
+    }
+
+    body {
+      margin: 0;
+      background: var(--navy);
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--white);
+      overflow-x: hidden;
+    }
+
+    a { color: inherit; }
+    img { display: block; max-width: 100%; height: auto; }
+    button, a { touch-action: manipulation; }
+    button { font: inherit; cursor: pointer; }
+
+    :focus-visible {
+      outline: 3px solid var(--yellow);
+      outline-offset: 4px;
+    }
+
+    .skip {
+      position: absolute;
+      z-index: 99;
+      left: 12px;
+      top: -60px;
+      padding: 10px 14px;
+      border-radius: 11px;
+      background: var(--yellow);
+      color: var(--navy);
+      font-weight: 900;
+    }
+
+    .skip:focus { top: 12px; }
+
+    .progress {
+      position: fixed;
+      z-index: 50;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: rgba(255, 255, 255, .2);
+    }
+
+    .progress span {
+      display: block;
+      width: 0;
+      height: 100%;
+      background: linear-gradient(90deg, var(--yellow), var(--red), var(--blue));
+    }
+
+    .slide {
+      position: relative;
+      isolation: isolate;
+      display: grid;
+      min-height: 100svh;
+      padding: 76px 0 30px;
+      overflow: hidden;
+      scroll-snap-align: start;
+    }
+
+    .wrap {
+      position: relative;
+      z-index: 2;
+      width: min(1120px, calc(100% - 34px));
+      margin: auto;
+    }
+
+    .topbar {
+      position: fixed;
+      z-index: 20;
+      top: 5px;
+      left: 50%;
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      width: min(1120px, calc(100% - 34px));
+      transform: translateX(-50%);
+      padding: 12px 0;
+    }
+
+    .logo {
+      display: grid;
+      place-items: center;
+      width: 40px;
+      height: 40px;
+      overflow: hidden;
+      border: 2px solid rgba(255, 255, 255, .9);
+      border-radius: 50%;
+      background: #fff;
+      box-shadow: 0 5px 13px rgba(0, 0, 0, .22);
+    }
+
+    .logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .brand {
+      margin-right: auto;
+      font-size: .78rem;
+      font-weight: 950;
+      letter-spacing: .055em;
+    }
+
+    .count {
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: var(--yellow);
+      color: var(--navy);
+      font-size: .72rem;
+      font-weight: 950;
+    }
+
+    .slide-one {
+      background:
+        radial-gradient(circle at 82% 20%, #2860d0, transparent 27%),
+        linear-gradient(135deg, #061638, #071F5B 48%, #0C3FA9);
+    }
+
+    .slide-one::before {
+      content: "MUEVE";
+      position: absolute;
+      z-index: -1;
+      right: -20px;
+      bottom: -28px;
+      color: rgba(255, 255, 255, .05);
+      font-size: clamp(7rem, 29vw, 18rem);
+      font-weight: 950;
+      letter-spacing: -.1em;
+    }
+
+    .slide-one::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      left: -105px;
+      bottom: -120px;
+      width: 290px;
+      height: 290px;
+      border: 42px solid rgba(225, 22, 46, .38);
+      border-radius: 50%;
+    }
+
+    .hero-grid {
+      display: grid;
+      gap: 12px;
+      align-items: end;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      padding: 7px 10px;
+      border: 1px solid rgba(255, 213, 74, .78);
+      border-radius: 999px;
+      color: var(--yellow);
+      font-size: .72rem;
+      font-weight: 950;
+      letter-spacing: .075em;
+      text-transform: uppercase;
+    }
+
+    .hero-title,
+    .slide-title {
+      margin: 13px 0 18px;
+      font-size: clamp(3rem, 13.5vw, 7.2rem);
+      line-height: .86;
+      letter-spacing: -.065em;
+      font-weight: 950;
+    }
+
+    .hero-title span,
+    .yellow { color: var(--yellow); }
+
+    .hero-copy p {
+      max-width: 510px;
+      margin: 0 0 21px;
+      color: #e8efff;
+      font-size: 1rem;
+    }
+
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 49px;
+      padding: 12px 17px;
+      border-radius: 999px;
+      background: var(--yellow);
+      color: var(--navy);
+      font-weight: 950;
+      text-decoration: none;
+      transition: transform .18s, box-shadow .18s;
+    }
+
+    .cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 22px rgba(0, 0, 0, .25);
+    }
+
+    .facts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 20px;
+    }
+
+    .fact {
+      max-width: 160px;
+      padding: 10px 12px;
+      border: 1px solid rgba(255, 255, 255, .26);
+      border-radius: 15px;
+      background: rgba(255, 255, 255, .1);
+      font-size: .74rem;
+    }
+
+    .fact b {
+      display: block;
+      color: var(--yellow);
+      font-size: 1.26rem;
+      line-height: 1;
+    }
+
+    .image-stage {
+      position: relative;
+      width: min(88vw, 430px);
+      min-height: 430px;
+      justify-self: end;
+      margin-right: -8px;
+    }
+
+    .image-stage > img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      opacity: 1;
+      filter: drop-shadow(0 22px 24px rgba(0, 0, 0, .31));
+      transition: opacity .38s ease;
+    }
+
+    .image-stage > img.is-switching { opacity: 0; }
+
+    .sticker {
+      position: absolute;
+      z-index: 3;
+      right: 18px;
+      top: 88px;
+      padding: 8px 10px;
+      border: 2px solid var(--navy);
+      border-radius: 12px;
+      background: #fff;
+      color: var(--red);
+      box-shadow: 4px 4px 0 var(--yellow);
+      font-size: .75rem;
+      font-weight: 950;
+      transform: rotate(4deg);
+    }
+
+    .next {
+      position: absolute;
+      z-index: 3;
+      bottom: 18px;
+      left: 50%;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      transform: translateX(-50%);
+      color: #fff;
+      text-decoration: none;
+      font-size: .76rem;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .next i {
+      display: grid;
+      place-items: center;
+      width: 25px;
+      height: 25px;
+      border: 1px solid rgba(255, 255, 255, .6);
+      border-radius: 50%;
+      font-style: normal;
+    }
+
+    .slide-two {
+      background: var(--yellow);
+      color: var(--navy);
+    }
+
+    .slide-two::before {
+      content: "01 02 03";
+      position: absolute;
+      z-index: -1;
+      right: -27px;
+      top: 46px;
+      color: rgba(7, 31, 91, .07);
+      font-size: clamp(6rem, 25vw, 17rem);
+      font-weight: 950;
+      letter-spacing: -.1em;
+      line-height: .8;
+    }
+
+    .slide-two .eyebrow {
+      border-color: rgba(7, 31, 91, .35);
+      color: var(--navy);
+    }
+
+    .two-grid {
+      display: grid;
+      gap: 19px;
+      align-items: center;
+    }
+
+    .slide-title { max-width: 660px; }
+    .slide-title .red { color: var(--red); }
+
+    .quick-cards { display: grid; gap: 9px; }
+
+    .quick-card {
+      display: grid;
+      grid-template-columns: 46px 1fr;
+      gap: 12px;
+      align-items: center;
+      min-height: 103px;
+      padding: 13px;
+      border: 2px solid var(--navy);
+      border-radius: 17px;
+      background: #fff;
+      box-shadow: 5px 5px 0 var(--navy);
+      text-align: left;
+      transition: transform .18s, background .18s, color .18s;
+    }
+
+    .quick-card:hover,
+    .quick-card[aria-pressed="true"] {
+      transform: translateY(-3px);
+      background: var(--navy);
+      color: #fff;
+    }
+
+    .quick-card b {
+      display: grid;
+      place-items: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 13px;
+      background: var(--navy);
+      color: var(--yellow);
+      font-size: 1rem;
+    }
+
+    .quick-card[aria-pressed="true"] b {
+      background: var(--yellow);
+      color: var(--navy);
+    }
+
+    .quick-copy { display: block; }
+
+    .quick-title {
+      display: block;
+      margin: 0;
+      font-size: 1.06rem;
+      font-weight: 800;
+      line-height: 1.05;
+    }
+
+    .quick-desc {
+      display: block;
+      margin-top: 4px;
+      font-size: .82rem;
+      font-weight: 650;
+    }
+
+    .info-box {
+      max-width: 720px;
+      min-height: 58px;
+      margin-top: 14px;
+      padding: 0;
+      overflow: hidden;
+      opacity: 0;
+      transform: translateY(7px);
+      transition: .2s;
+    }
+
+    .info-box.show {
+      padding: 12px 14px;
+      border-radius: 15px;
+      background: var(--navy);
+      color: #fff;
+      opacity: 1;
+      transform: none;
+    }
+
+    .info-box p {
+      margin: 0;
+      font-size: .88rem;
+      font-weight: 750;
+    }
+
+    .slide-two .image-stage {
+      width: min(78vw, 350px);
+      min-height: 410px;
+      justify-self: center;
+      margin: 0;
+      border-radius: var(--radius);
+      background: #fff;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .slide-two .image-stage > img {
+      padding: 0;
+      filter: none;
+    }
+
+    .image-caption {
+      position: absolute;
+      z-index: 2;
+      right: 12px;
+      bottom: 12px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      background: var(--navy);
+      color: var(--yellow);
+      font-size: .71rem;
+      font-weight: 950;
+      letter-spacing: .06em;
+    }
+
+    .slide-three {
+      background: linear-gradient(145deg, #030917, #071F5B);
+    }
+
+    .slide-three::before {
+      content: "05 02 03";
+      position: absolute;
+      z-index: -1;
+      left: -14px;
+      bottom: -48px;
+      color: rgba(255, 255, 255, .045);
+      font-size: clamp(6rem, 25vw, 16rem);
+      font-weight: 950;
+      letter-spacing: -.1em;
+    }
+
+    .three-grid {
+      display: grid;
+      gap: 21px;
+      align-items: center;
+    }
+
+    .slide-three .slide-title {
+      font-size: clamp(2.85rem, 12.7vw, 6.4rem);
+    }
+
+    .metric-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+    }
+
+    .metric {
+      min-height: 126px;
+      padding: 15px 10px;
+      border: 1px solid rgba(255, 255, 255, .24);
+      border-radius: 17px;
+      background: rgba(255, 255, 255, .08);
+      color: #fff;
+      text-align: left;
+      transition: transform .18s, background .18s, border-color .18s;
+    }
+
+    .metric:hover,
+    .metric[aria-pressed="true"] {
+      transform: translateY(-3px);
+      border-color: var(--yellow);
+      background: rgba(255, 213, 74, .16);
+    }
+
+    .metric b {
+      display: block;
+      color: var(--yellow);
+      font-size: 2.7rem;
+      line-height: .8;
+      letter-spacing: -.07em;
+    }
+
+    .metric-desc {
+      display: block;
+      margin-top: 9px;
+      font-size: .71rem;
+      font-weight: 800;
+      line-height: 1.17;
+    }
+
+    .metric-info {
+      max-width: 650px;
+      min-height: 58px;
+      margin-top: 14px;
+      padding: 0;
+      overflow: hidden;
+      opacity: 0;
+      transform: translateY(7px);
+      transition: .2s;
+    }
+
+    .metric-info.show {
+      padding: 12px 14px;
+      border: 1px solid rgba(255, 255, 255, .28);
+      border-radius: 15px;
+      background: rgba(255, 255, 255, .1);
+      opacity: 1;
+      transform: none;
+    }
+
+    .metric-info p {
+      margin: 0;
+      color: #fff;
+      font-size: .88rem;
+      font-weight: 750;
+    }
+
+    .plan-link {
+      margin-top: 17px;
+      background: var(--yellow);
+      color: var(--navy);
+    }
+
+    .final-art {
+      width: min(80vw, 350px);
+      justify-self: center;
+      border-radius: var(--radius);
+      background: #fff;
+      box-shadow: var(--shadow);
+    }
+
+    .identity {
+      margin: 19px 0 0;
+      color: var(--yellow);
+      font-size: .95rem;
+      font-weight: 950;
+    }
+
+    .disclosure {
+      margin: 12px 0 0;
+      color: #e0eaff;
+      font-size: .78rem;
+      max-width: 560px;
+    }
+
+    .social {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-top: 17px;
+    }
+
+    .social a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 43px;
+      padding: 9px 11px;
+      border: 1px solid rgba(255, 255, 255, .5);
+      border-radius: 999px;
+      color: #fff;
+      font-size: .8rem;
+      font-weight: 900;
+      text-decoration: none;
+    }
+
+    .social a:hover {
+      background: #fff;
+      color: var(--navy);
+    }
+
+    .audio {
+      position: fixed;
+      z-index: 40;
+      right: 13px;
+      bottom: 14px;
+      display: flex;
+      overflow: hidden;
+      border-radius: 999px;
+      box-shadow: 0 11px 26px rgba(0, 0, 0, .3);
+    }
+
+    .audio button {
+      min-height: 47px;
+      border: 0;
+      color: #fff;
+      font-weight: 950;
+    }
+
+    .audio-main {
+      padding: 0 14px;
+      background: var(--red);
+    }
+
+    .audio-mute {
+      width: 47px;
+      border-left: 1px solid rgba(255, 255, 255, .35) !important;
+      background: var(--navy);
+    }
+
+    .status {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    @media (min-width: 700px) {
+      .slide { padding: 92px 0 40px; }
+      .hero-grid { grid-template-columns: 1.12fr .88fr; }
+      .two-grid, .three-grid { grid-template-columns: 1.1fr .9fr; }
+      .image-stage { min-height: 500px; }
+      .slide-two .image-stage { min-height: 455px; }
+      .quick-cards { grid-template-columns: repeat(3, 1fr); }
+      .quick-card { grid-template-columns: 1fr; align-content: start; }
+      .quick-card b { width: 40px; height: 40px; }
+      .final-art { order: -1; }
+    }
+
+    @media (max-width: 370px) {
+      .metric b { font-size: 2.3rem; }
+      .metric-desc { font-size: .66rem; }
+      .image-stage { min-height: 370px; }
+      .slide-two .image-stage { min-height: 355px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+        scroll-snap-type: none;
+      }
+
+      * {
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#inicio">Saltar al contenido</a>
+
+  <div class="progress" aria-hidden="true">
+    <span id="progress"></span>
+  </div>
+
+  <header class="topbar">
+    <div class="logo" aria-label="Movimiento Regional Victoria Amazonense">
+      <img
+        src="assets/logo-victoria-amazonense.webp"
+        alt="Logo del Movimiento Regional Victoria Amazonense"
+        width="80"
+        height="80"
+        decoding="async">
+    </div>
+    <span class="brand">CHACHAPOYAS SE MUEVE</span>
+    <span class="count">01 / 03</span>
+  </header>
+
+  <main>
+    <section class="slide slide-one" id="inicio" aria-labelledby="title-one">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">Con el Tío Raulito ✌️</span>
+          <h1 class="hero-title" id="title-one">NO TE<br><span>VAYAS</span><br>PARA<br>CRECER.</h1>
+          <p>Tu talento no debería tener que irse lejos para despegar. Chachapoyas se puede mover contigo.</p>
+          <a class="cta" href="#propuestas">Desliza y mira lo que se mueve ↓</a>
+
+          <div class="facts" aria-label="Datos electorales contextuales">
+            <div class="fact"><b>1 de cada 4</b>votantes tiene entre 18 y 29 años</div>
+            <div class="fact"><b>+4 mil</b>nuevos votantes desde 2022</div>
+          </div>
+        </div>
+
+        <div class="image-stage" id="heroStage" aria-label="Personajes ilustrados de Chachapoyas Se Mueve">
+          <img
+            id="heroImage"
+            src="assets/Imagen_1.webp"
+            alt="Personaje ilustrado con lentes pixelados"
+            fetchpriority="high"
+            loading="eager"
+            decoding="async"
+            width="800"
+            height="1000">
+        </div>
+      </div>
+
+      <span class="sticker">#ChachapoyasSeMueve</span>
+      <a class="next" href="#propuestas">Desliza <i>↓</i></a>
+    </section>
+
+    <section class="slide slide-two" id="propuestas" aria-labelledby="title-two">
+      <div class="wrap two-grid">
+        <div>
+          <span class="eyebrow">Propuestas jóvenes</span>
+          <h2 class="slide-title" id="title-two">MÁS<br>CHAMBA.<br>MÁS <span class="red">IDEAS.</span><br>MÁS BARRIO.</h2>
+
+          <div class="quick-cards" role="group" aria-label="Propuestas prioritarias">
+            <button
+              class="quick-card"
+              type="button"
+              data-info="Talento que genera oportunidades: acceso a formación, capacitación técnica, empleo y emprendimiento vinculados al turismo, la cultura y la innovación."
+              aria-pressed="false">
+              <b>01</b>
+              <span class="quick-copy">
+                <span class="quick-title">Talento que genera oportunidades.</span>
+                <span class="quick-desc">Formación, empleo, emprendimiento y creatividad.</span>
+              </span>
+            </button>
+
+            <button
+              class="quick-card"
+              type="button"
+              data-info="Municipio en tu celular: canales simples para proponer, reportar, acceder a información y hacer seguimiento a las decisiones municipales."
+              aria-pressed="false">
+              <b>02</b>
+              <span class="quick-copy">
+                <span class="quick-title">Tu ciudad, en tu celular.</span>
+                <span class="quick-desc">Propón, reporta e infórmate de forma simple.</span>
+              </span>
+            </button>
+
+            <button
+              class="quick-card"
+              type="button"
+              data-info="Más cancha, más comunidad: espacios públicos para recreación, deporte y convivencia en zonas urbanas y periurbanas."
+              aria-pressed="false">
+              <b>03</b>
+              <span class="quick-copy">
+                <span class="quick-title">Más cancha, más comunidad.</span>
+                <span class="quick-desc">Deporte, cultura y espacios para encontrarse.</span>
+              </span>
+            </button>
+          </div>
+
+          <div class="info-box" id="proposalInfo" aria-live="polite"></div>
+        </div>
+
+        <div class="image-stage" id="proposalStage" aria-label="Imágenes de turismo, conectividad, cultura y ambiente">
+          <img
+            id="proposalImage"
+            src="assets/turismo.webp"
+            alt="Imagen representativa del turismo en Chachapoyas"
+            loading="lazy"
+            decoding="async"
+            width="700"
+            height="900">
+          <span class="image-caption" id="proposalCaption" aria-live="polite">TURISMO</span>
+        </div>
+      </div>
+
+      <a class="next" href="#metas" style="color:#071F5B">Metas concretas <i style="border-color:#071F5B">↓</i></a>
+    </section>
+
+    <section class="slide slide-three" id="metas" aria-labelledby="title-three">
+      <div class="wrap three-grid">
+        <div>
+          <span class="eyebrow">Metas 2027–2030</span>
+          <h2 class="slide-title" id="title-three">LO QUE SE<br><span class="yellow">MIDE,</span><br>SE PUEDE<br>EXIGIR.</h2>
+
+          <div class="metric-list" role="group" aria-label="Metas del Plan de Gobierno">
+            <button
+              class="metric"
+              type="button"
+              data-info="Meta 2027–2030: implementar al menos cinco nuevos espacios público-deportivos en el distrito de Chachapoyas."
+              aria-pressed="false">
+              <b>05</b>
+              <span class="metric-desc">Nuevos espacios público-deportivos en Chachapoyas.</span>
+            </button>
+
+            <button
+              class="metric"
+              type="button"
+              data-info="Meta 2027–2030: implementar al menos dos nuevos espacios público-deportivos en los distritos de mayor población de la provincia."
+              aria-pressed="false">
+              <b>02</b>
+              <span class="metric-desc">Nuevos espacios en distritos de mayor población.</span>
+            </button>
+
+            <button
+              class="metric"
+              type="button"
+              data-info="Meta 2027–2030: consolidar al menos tres rutas de negocio con participación activa de pequeños productores."
+              aria-pressed="false">
+              <b>03</b>
+              <span class="metric-desc">Rutas de negocio con pequeños productores.</span>
+            </button>
+          </div>
+
+          <div class="metric-info" id="metricInfo" aria-live="polite"></div>
+
+          <a class="cta plan-link" href="assets/plan-de-gobierno.pdf" target="_blank" rel="noopener">Mira el Plan de Gobierno ↗</a>
+
+          <p class="disclosure">Propuesta impulsada por la candidatura de Víctor Raúl Culqui Puerta a la Municipalidad Provincial de Chachapoyas, por el Movimiento Regional Victoria Amazonense.</p>
+
+          <p class="identity">Raúl Culqui · Victoria Amazonense<br>Sigamos haciendo historia ✌️</p>
+
+          <nav class="social" aria-label="Redes sociales de campaña">
+            <a href="https://www.instagram.com/raulculquipuerta" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://www.tiktok.com/@proferaulculqui" target="_blank" rel="noopener">TikTok</a>
+            <a href="https://www.facebook.com/RaulCulquiPuerta" target="_blank" rel="noopener">Facebook</a>
+            <a href="https://whatsapp.com/channel/0029VbDc84iHQbRzIsDugO0a" target="_blank" rel="noopener">WhatsApp</a>
+          </nav>
+        </div>
+
+        <img
+          class="final-art"
+          src="assets/Imagen_5.webp"
+          alt="Personaje ilustrado con poncho y gesto de victoria"
+          loading="lazy"
+          decoding="async"
+          width="700"
+          height="900">
+      </div>
+    </section>
+  </main>
+
+  <!-- El archivo de audio no se solicita hasta que el usuario pulsa Música. -->
+  <audio
+    id="campaignAudio"
+    loop
+    preload="none"
+    data-src="assets/juntos-haciendo-historia_6.mp3"></audio>
+
+  <div class="audio" role="group" aria-label="Control de música de campaña">
+    <button id="audioButton" class="audio-main" type="button" aria-pressed="false" aria-label="Activar música">▶ Música</button>
+    <button id="muteButton" class="audio-mute" type="button" aria-pressed="false" aria-label="Silenciar música">🔊</button>
+    <span id="audioStatus" class="status" aria-live="polite"></span>
+  </div>
+
+  <script>
+    (() => {
+      'use strict';
+
+      const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const progress = document.getElementById('progress');
+      const counter = document.querySelector('.count');
+      const slides = [...document.querySelectorAll('.slide')];
+
+      const updateProgress = () => {
+        const max = document.documentElement.scrollHeight - innerHeight;
+        progress.style.width = `${max ? (scrollY / max) * 100 : 0}%`;
+
+        let active = 0;
+        let min = Infinity;
+
+        slides.forEach((slide, index) => {
+          const distance = Math.abs(slide.getBoundingClientRect().top);
+          if (distance < min) {
+            min = distance;
+            active = index;
+          }
+        });
+
+        counter.textContent = `0${active + 1} / 03`;
+      };
+
+      addEventListener('scroll', updateProgress, { passive: true });
+      addEventListener('resize', updateProgress);
+      updateProgress();
+
+      const bindInfo = (selector, boxId) => {
+        const buttons = document.querySelectorAll(selector);
+        const box = document.getElementById(boxId);
+
+        buttons.forEach(button => {
+          button.addEventListener('click', () => {
+            buttons.forEach(item => item.setAttribute('aria-pressed', 'false'));
+            button.setAttribute('aria-pressed', 'true');
+            box.innerHTML = `<p>${button.dataset.info}</p>`;
+            box.classList.add('show');
+          });
+        });
+      };
+
+      bindInfo('.quick-card', 'proposalInfo');
+      bindInfo('.metric', 'metricInfo');
+
+      const preloadImage = src => new Promise((resolve, reject) => {
+        const image = new Image();
+        image.onload = () => resolve(src);
+        image.onerror = reject;
+        image.src = src;
+      });
+
+      const createProgressiveCarousel = ({
+        imageId,
+        stageId,
+        items,
+        interval = 3600,
+        captionId = null,
+        startDelay = 1200
+      }) => {
+        const image = document.getElementById(imageId);
+        const stage = document.getElementById(stageId);
+        const caption = captionId ? document.getElementById(captionId) : null;
+
+        if (!image || !stage || reducedMotion || items.length < 2) return;
+
+        let current = 0;
+        let timer = null;
+        let running = false;
+        let busy = false;
+        let initialDelayTimer = null;
+
+        const showNext = async () => {
+          if (busy || !running) return;
+          busy = true;
+
+          const next = (current + 1) % items.length;
+          const item = items[next];
+
+          try {
+            await preloadImage(item.src);
+            if (!running) return;
+
+            image.classList.add('is-switching');
+            await new Promise(resolve => setTimeout(resolve, 220));
+
+            image.src = item.src;
+            image.alt = item.alt;
+            if (caption) caption.textContent = item.caption || '';
+
+            try {
+              if (image.decode) await image.decode();
+            } catch {
+              // El navegador puede mostrar la imagen aunque decode() no esté disponible.
+            }
+
+            current = next;
+            image.classList.remove('is-switching');
+          } catch {
+            image.classList.remove('is-switching');
+          } finally {
+            busy = false;
+          }
+        };
+
+        const start = () => {
+          if (running) return;
+          running = true;
+
+          initialDelayTimer = setTimeout(() => {
+            if (!running) return;
+            showNext();
+            timer = setInterval(showNext, interval);
+          }, startDelay);
+        };
+
+        const stop = () => {
+          running = false;
+          clearTimeout(initialDelayTimer);
+          clearInterval(timer);
+          timer = null;
+        };
+
+        if ('IntersectionObserver' in window) {
+          const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting && entry.intersectionRatio >= .25) start();
+              else stop();
+            });
+          }, { threshold: [0, .25, .5] });
+
+          observer.observe(stage);
+        } else {
+          start();
+        }
+      };
+
+      const startCarousels = () => {
+        createProgressiveCarousel({
+          imageId: 'heroImage',
+          stageId: 'heroStage',
+          startDelay: 1800,
+          items: [
+            { src: 'assets/Imagen_1.webp', alt: 'Personaje ilustrado con lentes pixelados' },
+            { src: 'assets/Imagen_2.webp', alt: 'Personaje ilustrado con skateboard' },
+            { src: 'assets/Imagen_3.webp', alt: 'Personaje ilustrado con gorro y morral' },
+            { src: 'assets/Imagen_4.webp', alt: 'Personaje ilustrado con audífonos' }
+          ]
+        });
+
+        createProgressiveCarousel({
+          imageId: 'proposalImage',
+          stageId: 'proposalStage',
+          captionId: 'proposalCaption',
+          startDelay: 900,
+          items: [
+            { src: 'assets/turismo.webp', alt: 'Imagen representativa del turismo en Chachapoyas', caption: 'TURISMO' },
+            { src: 'assets/conectividad.webp', alt: 'Imagen representativa de la conectividad territorial', caption: 'CONECTIVIDAD' },
+            { src: 'assets/cultura.webp', alt: 'Imagen representativa de la cultura e identidad local', caption: 'CULTURA' },
+            { src: 'assets/ambiente.webp', alt: 'Imagen representativa del ambiente y futuro sostenible', caption: 'AMBIENTE' }
+          ]
+        });
+      };
+
+      // Espera a que la carga crítica haya terminado antes de pedir imágenes secundarias.
+      if (document.readyState === 'complete') {
+        startCarousels();
+      } else {
+        addEventListener('load', startCarousels, { once: true });
+      }
+
+      const audio = document.getElementById('campaignAudio');
+      const main = document.getElementById('audioButton');
+      const mute = document.getElementById('muteButton');
+      const status = document.getElementById('audioStatus');
+
+      audio.volume = .20;
+      let used = false;
+      let audioReady = false;
+
+      const ensureAudioSource = () => {
+        if (audioReady) return;
+        audio.src = audio.dataset.src;
+        audio.load();
+        audioReady = true;
+      };
+
+      const setAudioLabel = state => {
+        if (state === 'playing') {
+          main.textContent = '❚❚ Pausar';
+          main.setAttribute('aria-label', 'Pausar música');
+          main.setAttribute('aria-pressed', 'true');
+        } else if (state === 'paused') {
+          main.textContent = '▶ Reanudar';
+          main.setAttribute('aria-label', 'Reanudar música');
+          main.setAttribute('aria-pressed', 'false');
+        } else {
+          main.textContent = '▶ Música';
+          main.setAttribute('aria-label', 'Activar música');
+          main.setAttribute('aria-pressed', 'false');
+        }
+      };
+
+      const unavailable = () => {
+        setAudioLabel('initial');
+        status.textContent = 'No fue posible reproducir el audio. Puedes seguir explorando las propuestas.';
+      };
+
+      main.addEventListener('click', async () => {
+        try {
+          ensureAudioSource();
+
+          if (audio.paused) {
+            await audio.play();
+            used = true;
+            setAudioLabel('playing');
+            status.textContent = 'Música activada.';
+          } else {
+            audio.pause();
+            setAudioLabel('paused');
+            status.textContent = 'Música pausada.';
+          }
+        } catch {
+          unavailable();
+        }
+      });
+
+      mute.addEventListener('click', () => {
+        audio.muted = !audio.muted;
+        mute.textContent = audio.muted ? '🔇' : '🔊';
+        mute.setAttribute('aria-pressed', String(audio.muted));
+        mute.setAttribute('aria-label', audio.muted ? 'Activar sonido' : 'Silenciar música');
+      });
+
+      audio.addEventListener('error', unavailable);
+      audio.addEventListener('pause', () => {
+        if (used && !audio.ended) setAudioLabel('paused');
+      });
+      audio.addEventListener('play', () => setAudioLabel('playing'));
+    })();
+  </script>
+</body>
+</html>
